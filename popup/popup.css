@@ -1,0 +1,251 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --primary: #4f46e5;
+  --primary-hover: #4338ca;
+  --bg: #ffffff;
+  --surface: #f4f4f5;
+  --text: #18181b;
+  --text-muted: #71717a;
+  --border: #e4e4e7;
+  --success: #16a34a;
+  --danger: #dc2626;
+  --warning: #d97706;
+  --radius: 8px;
+  --radius-sm: 6px;
+  --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1c1c1e;
+    --surface: #2c2c2e;
+    --text: #f2f2f7;
+    --text-muted: #98989e;
+    --border: #3a3a3c;
+  }
+}
+
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+  width: 280px;
+  min-height: 100px;
+}
+
+.popup-root { padding: 0; }
+
+/* Header */
+.popup-header {
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.popup-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.popup-logo {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+}
+
+.popup-brand-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.popup-name {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+
+.popup-tagline {
+  font-size: 11px;
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+/* Sections */
+.popup-section {
+  padding: 12px 16px;
+}
+
+.popup-section-label {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+}
+
+.popup-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 0;
+}
+
+/* Usage cards */
+.usage-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.usage-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 10px;
+  background: var(--surface);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+}
+
+.usage-card-full { width: 100%; }
+
+.usage-icon { font-size: 16px; line-height: 1; }
+
+.usage-info {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.usage-name {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text);
+  min-width: 52px;
+  flex-shrink: 0;
+}
+
+.usage-bar-wrap {
+  flex: 1;
+  height: 4px;
+  background: var(--border);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.usage-bar {
+  height: 100%;
+  background: var(--primary);
+  border-radius: 2px;
+  transition: width 400ms ease;
+}
+
+.usage-bar.bar-low { background: var(--warning); }
+
+.usage-count {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--primary);
+  min-width: 36px;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.usage-saved-count {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--primary);
+  flex: 1;
+}
+
+/* API Status */
+.api-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  background: var(--surface);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+}
+
+.api-status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--border);
+  flex-shrink: 0;
+}
+
+.dot-green { background: var(--success); box-shadow: 0 0 4px rgba(22,163,74,0.4); }
+.dot-red { background: var(--danger); box-shadow: 0 0 4px rgba(220,38,38,0.4); }
+
+.api-status-text {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* Footer actions */
+.popup-footer {
+  display: flex;
+  gap: 6px;
+  padding: 10px 16px 12px;
+}
+
+.popup-action-btn {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 7px 12px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 140ms ease, border-color 140ms ease;
+}
+
+.popup-action-btn:hover {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+}
+
+/* Sites list */
+.sites-list {
+  padding: 10px 16px 12px;
+  border-top: 1px solid var(--border);
+}
+
+.sites-title {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-bottom: 7px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.sites-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.site-chip {
+  font-size: 11.5px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 4px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+}

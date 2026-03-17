@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PerfectPrompt</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="popup-root">
+    <!-- Header -->
+    <div class="popup-header">
+      <div class="popup-brand">
+        <img src="../icons/icon48.png" alt="PerfectPrompt" class="popup-logo">
+        <div class="popup-brand-text">
+          <span class="popup-name">PerfectPrompt</span>
+          <span class="popup-tagline">AI Prompt Toolkit</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Usage Stats -->
+    <div class="popup-section">
+      <p class="popup-section-label">Today's Usage</p>
+      <div class="usage-grid">
+        <div class="usage-card">
+          <div class="usage-icon">⚡</div>
+          <div class="usage-info">
+            <span class="usage-name">Perfect</span>
+            <div class="usage-bar-wrap">
+              <div class="usage-bar" id="perfect-bar"></div>
+            </div>
+            <span class="usage-count" id="perfect-count">— / 20</span>
+          </div>
+        </div>
+        <div class="usage-card">
+          <div class="usage-icon">💬</div>
+          <div class="usage-info">
+            <span class="usage-name">Feedback</span>
+            <div class="usage-bar-wrap">
+              <div class="usage-bar" id="feedback-bar"></div>
+            </div>
+            <span class="usage-count" id="feedback-count">— / 20</span>
+          </div>
+        </div>
+        <div class="usage-card usage-card-full">
+          <div class="usage-icon">🔖</div>
+          <div class="usage-info">
+            <span class="usage-name">Saved Prompts</span>
+            <span class="usage-saved-count" id="saved-count">—</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="popup-divider"></div>
+
+    <!-- API Key Status -->
+    <div class="popup-section">
+      <p class="popup-section-label">Status</p>
+      <div class="api-status" id="api-status">
+        <span class="api-status-dot" id="api-dot"></span>
+        <span class="api-status-text" id="api-text">Checking...</span>
+      </div>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="popup-footer">
+      <button class="popup-action-btn" id="btn-settings">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
+        Settings
+      </button>
+      <button class="popup-action-btn" id="btn-supported">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        Supported Sites
+      </button>
+    </div>
+
+    <!-- Supported sites tooltip -->
+    <div class="sites-list" id="sites-list" hidden>
+      <p class="sites-title">Works on:</p>
+      <div class="sites-chips">
+        <span class="site-chip" style="color:#10a37f">ChatGPT</span>
+        <span class="site-chip" style="color:#1a73e8">Gemini</span>
+        <span class="site-chip" style="color:#d97706">Claude</span>
+        <span class="site-chip" style="color:#6366f1">DeepSeek</span>
+      </div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
