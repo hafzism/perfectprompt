@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PerfectPrompt — Settings</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <div class="options-root">
+    <!-- Header -->
+    <div class="options-header">
+      <div class="options-brand">
+        <img src="../icons/icon48.png" alt="PerfectPrompt" class="options-logo">
+        <div>
+          <h1 class="options-title">PerfectPrompt</h1>
+          <p class="options-subtitle">Settings</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="options-body">
+      <!-- Save banner -->
+      <div class="save-banner" id="save-banner" hidden>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+        Settings saved!
+      </div>
+
+      <!-- API Key Section -->
+      <div class="options-card">
+        <div class="card-header">
+          <h2 class="card-title">Google Gemini API Key</h2>
+          <span class="card-badge" id="key-badge">Not set</span>
+        </div>
+        <p class="card-desc">
+          PerfectPrompt uses Google's latest Gemini 2.5 Flash model. Get a free API key at
+          <a href="https://aistudio.google.com/app/apikey" target="_blank" class="link">Google AI Studio</a>.
+        </p>
+        <div class="field-group">
+          <label class="field-label" for="api-key-input">API Key</label>
+          <div class="key-input-wrap">
+            <input
+              type="password"
+              id="api-key-input"
+              class="field-input"
+              placeholder="sk-or-v1-..."
+              autocomplete="off"
+              spellcheck="false"
+            >
+            <button class="toggle-visibility" id="toggle-key" title="Show/hide key">
+              <svg id="eye-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- AI Model Info -->
+      <div class="options-card">
+        <div class="card-header">
+          <h2 class="card-title">AI Model</h2>
+          <span class="card-tag">Free · Fast</span>
+        </div>
+        <p class="card-desc">
+          PerfectPrompt uses <strong>gemini-2.5-flash</strong> — Google's newest and fastest lightweight model. It is perfect for prompt refinement and feedback, offering excellent reasoning speed and very high rate limits on the free tier.
+        </p>
+        <div class="model-info-row">
+          <span class="model-info-icon">✓</span>
+          <span class="model-info-text">1,000,000 token context · Lightning fast responses</span>
+        </div>
+      </div>
+
+      <!-- Usage Section -->
+      <div class="options-card">
+        <div class="card-header">
+          <h2 class="card-title">Today's Usage</h2>
+          <span class="card-badge" id="reset-date">—</span>
+        </div>
+        <div class="usage-rows">
+          <div class="usage-row">
+            <span class="usage-label">⚡ Perfect</span>
+            <div class="usage-bar-wrap"><div class="usage-bar" id="opt-perfect-bar"></div></div>
+            <span class="usage-val" id="opt-perfect-val">—</span>
+          </div>
+          <div class="usage-row">
+            <span class="usage-label">💬 Feedback</span>
+            <div class="usage-bar-wrap"><div class="usage-bar" id="opt-feedback-bar"></div></div>
+            <span class="usage-val" id="opt-feedback-val">—</span>
+          </div>
+        </div>
+        <button class="reset-btn" id="reset-limits">Reset Today's Limits</button>
+      </div>
+
+      <!-- Save Button -->
+      <div class="options-actions">
+        <button class="save-btn" id="save-btn">Save Settings</button>
+      </div>
+    </div>
+  </div>
+  <script src="options.js"></script>
+</body>
+</html>
