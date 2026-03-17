@@ -1,0 +1,54 @@
+{
+  "manifest_version": 3,
+  "name": "PerfectPrompt",
+  "version": "1.0.0",
+  "description": "Supercharge your AI prompts. Perfect, get feedback, save & reuse prompts on ChatGPT, Gemini, Claude, Copilot & DeepSeek.",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png"
+    },
+    "default_title": "PerfectPrompt"
+  },
+  "options_page": "options/options.html",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://chatgpt.com/*",
+        "https://gemini.google.com/*",
+        "https://claude.ai/*",
+        "https://chat.deepseek.com/*"
+      ],
+      "js": [
+        "content/sites.js",
+        "content/ai.js",
+        "content/limits.js",
+        "content/features/perfect.js",
+        "content/features/feedback.js",
+        "content/features/save.js",
+        "content/features/your-prompts.js",
+        "content/features/templates.js",
+        "content/content.js"
+      ],
+      "css": ["content/content.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "permissions": ["storage", "activeTab"],
+  "host_permissions": [
+    "https://chatgpt.com/*",
+    "https://gemini.google.com/*",
+    "https://claude.ai/*",
+    "https://chat.deepseek.com/*",
+    "https://generativelanguage.googleapis.com/*"
+  ]
+}
