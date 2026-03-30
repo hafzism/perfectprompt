@@ -169,7 +169,7 @@ function App() {
               </motion.a>
             </div>
 
-            <div className="mt-10 grid gap-4 sm:grid-cols-3">
+            <div className="hero-stats mt-10">
               {heroStats.map((stat, index) => (
                 <Reveal key={stat.label} delay={0.08 + index * 0.06}>
                   <div className="stat-card">
@@ -194,7 +194,7 @@ function App() {
                 </div>
 
                 <div className="showcase-window">
-                  <div className="showcase-toolbar">
+                  <div className="pill-grid showcase-toolbar">
                     <span className="tool-pill tool-pill-orange">Perfect</span>
                     <span className="tool-pill tool-pill-blue">Feedback</span>
                     <span className="tool-pill">Save</span>
@@ -220,10 +220,10 @@ function App() {
                   </div>
                 </div>
 
-                <div className="showcase-footer">
+                <div className="showcase-footer showcase-footer-grid">
                   <div>
                     <div className="text-xs uppercase tracking-[0.3em] text-white/42">Works on</div>
-                    <div className="mt-3 flex flex-wrap gap-2">
+                    <div className="pill-grid pill-grid-compact mt-3">
                       {supportedPlatforms.map((platform) => (
                         <span key={platform} className="platform-pill">
                           {platform}
@@ -244,14 +244,14 @@ function App() {
         </section>
 
         <Section id="what-it-is" eyebrow="What It Is" title="A prompt toolkit that lives inside the chat interface, not in another tab.">
-          <div className="mt-12 grid gap-8 lg:grid-cols-[1.05fr_0.95fr]">
+          <div className="mt-12 grid items-start gap-6 lg:grid-cols-[1.05fr_0.95fr] xl:gap-8">
             <Reveal>
-              <div className="editorial-card h-full">
+              <div className="editorial-card setup-support-card">
                 <p className="kicker">Product summary</p>
                 <p className="mt-5 text-xl leading-9 text-white/80">
                   PerfectPrompt injects a floating toolbar next to the prompt box on supported AI platforms. From there, you can perfect a draft, get prompt feedback, save a useful prompt, reopen your saved prompt library, or start from a built-in template.
                 </p>
-                <div className="mt-8 grid gap-3">
+                <div className="info-list-grid mt-8">
                   {usageNotes.map((note) => (
                     <div key={note} className="info-row">
                       <span className="info-bullet" />
@@ -265,7 +265,7 @@ function App() {
             <Reveal delay={0.08}>
               <div className="image-stack">
                 {visuals.map((visual, index) => (
-                  <figure key={visual.src} className={`placeholder-frame ${index === 1 ? 'placeholder-offset' : ''}`}>
+                  <figure key={visual.src} className={`placeholder-frame ${index === 0 ? 'placeholder-frame-primary' : 'placeholder-frame-secondary'}`}>
                     <img
                       src={visual.src}
                       alt={visual.alt}
@@ -284,7 +284,7 @@ function App() {
         </Section>
 
         <Section id="features" eyebrow="Features" title="Five tools designed to improve prompts without slowing you down.">
-          <div className="mt-12 grid gap-5 lg:grid-cols-3">
+          <div className="feature-grid mt-12">
             {featureCards.map((feature, index) => (
               <Reveal key={feature.title} delay={index * 0.08}>
                 <motion.article
@@ -317,9 +317,9 @@ function App() {
         <Section id="setup" eyebrow="Setup / How It Works" title="Download, load unpacked, add your Gemini key, and use it where you already work.">
           <div className="mt-12 grid gap-6 lg:grid-cols-[0.92fr_1.08fr]">
             <Reveal>
-              <div className="editorial-card h-full">
+              <div className="editorial-card">
                 <p className="kicker">Supported platforms</p>
-                <div className="mt-6 flex flex-wrap gap-3">
+                <div className="pill-grid pill-grid-compact mt-6">
                   {supportedPlatforms.map((platform, index) => (
                     <motion.span
                       key={platform}
@@ -343,7 +343,7 @@ function App() {
               </div>
             </Reveal>
 
-            <div className="grid gap-4">
+            <div className="setup-steps">
               {setupSteps.map((step, index) => (
                 <Reveal key={step} delay={index * 0.05}>
                   <motion.div
