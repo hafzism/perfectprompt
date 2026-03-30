@@ -1,2 +1,4 @@
 .agent/
 .codex/
+web/node_modules/
+web/dist/
