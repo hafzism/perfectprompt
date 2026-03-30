@@ -24,6 +24,7 @@ PerfectPrompt is a **Chrome Extension (Manifest V3)** that injects a floating to
 - [Gemini](https://gemini.google.com)
 - [Claude](https://claude.ai)
 - [DeepSeek](https://chat.deepseek.com)
+- [Perplexity](https://www.perplexity.ai)
 
 ---
 

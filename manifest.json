@@ -26,7 +26,8 @@
         "https://chatgpt.com/*",
         "https://gemini.google.com/*",
         "https://claude.ai/*",
-        "https://chat.deepseek.com/*"
+        "https://chat.deepseek.com/*",
+        "https://www.perplexity.ai/*"
       ],
       "js": [
         "content/sites.js",
@@ -49,6 +50,7 @@
     "https://gemini.google.com/*",
     "https://claude.ai/*",
     "https://chat.deepseek.com/*",
+    "https://www.perplexity.ai/*",
     "https://generativelanguage.googleapis.com/*"
   ]
 }

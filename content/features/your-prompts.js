@@ -20,7 +20,8 @@
     'Gemini': '#1a73e8',
     'Claude': '#d97706',
     'Copilot': '#0078d4',
-    'DeepSeek': '#6366f1'
+    'DeepSeek': '#6366f1',
+    'Perplexity': '#0ea5e9'
   };
 
   function renderPromptList(prompts, searchQuery, activeFilter, panel, textarea) {

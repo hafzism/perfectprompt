@@ -104,6 +104,24 @@
         }
         return el || textarea.parentElement;
       }
+    },
+    'perplexity.ai': {
+      name: 'Perplexity',
+      shortName: 'perplexity',
+      color: '#0ea5e9',
+      textareaSelectors: [
+        'textarea[placeholder*="Ask"]',
+        'textarea',
+        'div[contenteditable="true"]'
+      ],
+      injectAnchorSelectors: [],
+      getInjectParent: (anchor, textarea) => {
+        let el = textarea;
+        for (let i = 0; i < 4; i++) {
+          if (el && el.parentElement) el = el.parentElement;
+        }
+        return el || textarea.parentElement;
+      }
     }
   };
 
