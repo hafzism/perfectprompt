@@ -343,9 +343,9 @@ img {
 }
 
 .platform-pill {
-  min-height: 42px;
-  padding: 0.6rem 0.95rem;
-  font-size: 0.86rem;
+  min-height: 36px;
+  padding: 0.45rem 0.75rem;
+  font-size: 0.72rem;
   font-weight: 600;
   color: rgba(255, 255, 255, 0.86);
   transition:
@@ -466,7 +466,7 @@ img {
 .setup-support-card {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  align-self: start;
 }
 
 .showcase-footer-grid,
@@ -537,7 +537,6 @@ img {
   }
 
   .setup-support-card {
-    min-height: 100%;
     justify-content: space-between;
   }
 }

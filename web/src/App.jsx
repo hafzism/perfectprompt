@@ -49,16 +49,16 @@ const heroStats = [
 
 const visuals = [
   {
-    title: 'Placeholder visual',
-    caption: 'Replace with an extension toolbar screenshot later.',
-    src: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80',
-    alt: 'Developer workspace placeholder visual for PerfectPrompt landing page',
+    title: 'Prompt refinement',
+    caption: 'PerfectPrompt asks focused follow-up questions before rewriting the prompt.',
+    src: '/prompt.png',
+    alt: 'PerfectPrompt prompt refinement flow screenshot',
   },
   {
-    title: 'Placeholder visual',
-    caption: 'Replace with a settings or feature demo later.',
-    src: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80',
-    alt: 'Productivity workspace placeholder visual for PerfectPrompt landing page',
+    title: 'Prompt feedback',
+    caption: 'The feedback panel scores the draft and shows what to improve next.',
+    src: '/feedback.png',
+    alt: 'PerfectPrompt prompt feedback screenshot',
   },
 ];
 
