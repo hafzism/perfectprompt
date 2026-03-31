@@ -1,0 +1,10 @@
+# PerfectPrompt
+
+> PerfectPrompt is a Chrome extension for better AI prompts.
+
+PerfectPrompt helps users refine drafts, get prompt feedback, save reusable prompts, and start from templates inside leading AI chat apps.
+
+- Canonical site: https://perfectprompt.hafzism.in/
+- Product type: Chrome extension
+- Source repository: https://github.com/hafzism/perfectprompt
+- Download: https://perfectprompt.hafzism.in/perfectprompt-extension.zip

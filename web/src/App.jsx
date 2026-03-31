@@ -47,6 +47,24 @@ const heroStats = [
   { value: '20 / day', label: 'Feedback actions in the current free build' },
 ];
 
+const faqItems = [
+  {
+    question: 'What is PerfectPrompt?',
+    answer:
+      'PerfectPrompt is a Chrome extension for better AI prompts. It adds prompt improvement, prompt feedback, saved prompts, and prompt templates directly inside supported AI chat apps.',
+  },
+  {
+    question: 'Which AI tools does PerfectPrompt support?',
+    answer:
+      'The current landing page and codebase list ChatGPT, Gemini, Claude, DeepSeek, and Perplexity as supported platforms.',
+  },
+  {
+    question: 'Where is my data stored?',
+    answer:
+      'Based on the current build, your Gemini API key and saved prompts stay in browser storage, and requests go directly from the browser to Google rather than through a PerfectPrompt backend.',
+  },
+];
+
 const visuals = [
   {
     title: 'Prompt refinement',
@@ -139,12 +157,12 @@ function App() {
             </div>
 
             <h1 className="mt-7 max-w-4xl font-[var(--font-display)] text-5xl leading-[0.92] text-white sm:text-6xl lg:text-7xl">
-              Sharper prompts,
+              PerfectPrompt makes prompts sharper,
               <span className="hero-highlight"> right where you type.</span>
             </h1>
 
             <p className="mt-7 max-w-2xl text-lg leading-8 text-white/74 sm:text-xl">
-              PerfectPrompt is a Chrome extension that adds a floating prompt toolkit to major AI chat apps, so you can refine, review, save, and reuse prompts without breaking your flow.
+              PerfectPrompt is a Chrome extension for better AI prompts. It adds a floating prompt toolkit to major AI chat apps so you can refine, review, save, and reuse prompts without breaking your flow.
             </p>
 
             <div className="mt-9 flex flex-col gap-4 sm:flex-row">
@@ -280,6 +298,19 @@ function App() {
                 ))}
               </div>
             </Reveal>
+          </div>
+        </Section>
+
+        <Section id="faq" eyebrow="FAQ" title="Answers for people comparing AI prompt tools and Chrome extensions.">
+          <div className="mt-12 grid gap-6 lg:grid-cols-3">
+            {faqItems.map((item, index) => (
+              <Reveal key={item.question} delay={index * 0.06}>
+                <article className="editorial-card h-full p-8">
+                  <h3 className="text-2xl font-semibold leading-tight text-white">{item.question}</h3>
+                  <p className="mt-4 text-base leading-7 text-white/72">{item.answer}</p>
+                </article>
+              </Reveal>
+            ))}
           </div>
         </Section>
 
